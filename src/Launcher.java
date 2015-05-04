@@ -1,4 +1,3 @@
-
 public class Launcher {
 	private final static int	MIN_HEAP	= 1024;
 
@@ -12,8 +11,7 @@ public class Launcher {
 		} else {
 			System.out.println("Starting new VM");
 			String pathToJar = TradeOptimizerUi.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
-			ProcessBuilder pb = new ProcessBuilder("java", "-XX:+AggressiveHeap", "-classpath", pathToJar,
-					"TradeOptimizerUi");
+			ProcessBuilder pb = new ProcessBuilder("java", "-Xmx" + MIN_HEAP + "m", "-classpath", pathToJar, "TradeOptimizerUi");
 			pb.start();
 		}
 	}
