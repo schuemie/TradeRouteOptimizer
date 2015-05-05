@@ -56,9 +56,9 @@ public class AutocompleteJComboBox extends JComboBox<String> {
 							setEditable(false);
 							removeAllItems();
 
-							if (!foundSet.contains(tc.getText().toLowerCase())) {
+							//if (!foundSet.contains(tc.getText().toLowerCase())) {
 								addItem(tc.getText());
-							}
+							//}
 
 							for (String s : founds) {
 								addItem(s);
