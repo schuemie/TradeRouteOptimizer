@@ -405,7 +405,7 @@ public class TradeOptimizerUi {
 			frame.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
 			try {
 				DataProcessor newDataProcessor = new DataProcessor(folder);
-				newDataProcessor.saveToFile(folder + "/EddbDataProcessor.bin");
+				newDataProcessor.saveToFile(folder + DATA_FILE_NAME);
 				dataProcessor = newDataProcessor;
 				buildStationList();
 				buildSystemList();
