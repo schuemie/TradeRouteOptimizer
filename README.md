@@ -1,13 +1,13 @@
 TradeRouteOptimizer
 ===================
 
-A Java application for computing optimal trade routes for the game Elite Dangerous. Routes start from your current location, and include as many hops as you specify. The program will choose the best route and which commodities to buy and sell at each station. 
+A Java application for computing optimal trade routes for the game [Elite: Dangerous](https://www.elitedangerous.com/). Routes start from your current location, and include as many hops as you specify. The program will choose the best route and which commodities to buy and sell at each station. 
 
 Features
 ========
 - Guaranteed to find the optimal route (give or take errors in the data).
 - Downloads the data from [eddb.io](http://eddb.io/).
-- Specify the max hop distance, minimum landing pad size, max distance from the star to the station, and optionally a 'via' system.
+- Specify the max hop distance, minimum landing pad size, max distance from the star to the station, whether loops should be avoided, and optionally a 'via' system.
 
 How does it work?
 =================
