@@ -207,7 +207,13 @@ public class TradeOptimizerUi {
 
 		c.gridx = 0;
 		c.gridy = 0;
-		c.gridwidth = 4;
+		c.gridwidth = 1;
+		c.weightx = 1;
+		panel.add(new JLabel("Starting station:"), c);
+		
+		c.gridx = 1;
+		c.gridy = 0;
+		c.gridwidth = 3;
 		c.weightx = 1;
 		startStationComboBox = new AutocompleteJComboBox(stations);
 		startStationComboBox.setToolTipText("The starting station");
@@ -234,7 +240,7 @@ public class TradeOptimizerUi {
 		c.gridy = 1;
 		c.gridwidth = 1;
 		maxStarDistanceField = new JTextField("1000");
-		maxStarDistanceField.setToolTipText("The maximum distance in lightseconds from the star to the station");
+		maxStarDistanceField.setToolTipText("The maximum distance in lightseconds from the star (where you jump in) to the station");
 		panel.add(maxStarDistanceField, c);
 
 		c.gridx = 0;
@@ -358,10 +364,19 @@ public class TradeOptimizerUi {
 				} else
 					settings.viaSystem = null;
 				String startStation = (String) startStationComboBox.getSelectedItem();
+				if (startStation == null) 
+					throw new RuntimeException("Please enter a starting station"); 
 				String[] stationSystem = startStation.split(" - ");
+				if (stationSystem.length != 2) 
+					throw new RuntimeException("Incorrect station or system name"); 
 				settings.startStation = dataProcessor.findStation(stationSystem[1], stationSystem[0]);
 				System.out.println("Computing route");
 				dataProcessor.findMultiHops(settings);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(frame,
+					    e.getMessage(),
+					    "Error when computing route",
+					    JOptionPane.ERROR_MESSAGE);
 			} finally {
 				computeRouteButton.setText("Compute route");
 				computeRouteButton.setBackground(new Color(151, 220, 141));

@@ -28,6 +28,8 @@ Getting started
 - After downloading has completed (the 'hourglass' pointer has gone away), go to **Data** and select **Preprocess data**. Then click **Ok**. This will prepare the data for use.
 - Now you are ready! Type in the name of your starting station or system, set the other options and click **Compute route**. 
 
+Tip: when you move your mouse over the various entry fields you will get some more information.
+
 Acknowledgements
 ================
 This application was written by Martijn Schuemie. Data is provided by [eddb.io](http://eddb.io/). [Elite: Dangerous](https://www.elitedangerous.com/) and all associated media are the intellectual property of [Frontier Developments](http://www.frontier.co.uk/).
