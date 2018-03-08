@@ -3,6 +3,8 @@ TradeRouteOptimizer
 
 A Java application for computing optimal trade routes for the game [Elite: Dangerous](https://www.elitedangerous.com/). Routes start from your current location, and include as many hops as you specify. The program will choose the best route and which commodities to buy and sell at each station. 
 
+**Note: this code is out of date, and likely no longer works as the EDDB may have changed or may even be gone.**
+
 Features
 ========
 - Guaranteed to find the optimal route (give or take errors in the data).
